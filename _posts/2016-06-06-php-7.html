@@ -1,0 +1,39 @@
+---
+layout: post
+title: PHP 7
+date: 2016-06-06 08:26:56.000000000 +03:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- PHP
+- Tehnic
+- Web
+- www
+tags: []
+meta:
+  _edit_last: '1'
+  _wpas_done_all: '1'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1545061627;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:277;}i:1;a:1:{s:2:"id";i:14;}i:2;a:1:{s:2:"id";i:201;}}}}
+  _jetpack_dont_email_post_to_subs: '1'
+  _lf_language_code: en-US
+  _schema_article: a:12:{s:6:"active";N;s:8:"headline";N;s:16:"mainEntityOfPage";N;s:6:"author";N;s:5:"image";N;s:13:"datePublished";N;s:12:"dateModified";N;s:9:"publisher";N;s:14:"publisherImage";N;s:11:"description";N;s:11:"articleBody";N;s:19:"alternativeHeadline";N;}
+  _schema_blog_posting: a:11:{s:6:"active";N;s:8:"headline";N;s:16:"mainEntityOfPage";N;s:6:"author";N;s:5:"image";N;s:13:"datePublished";N;s:12:"dateModified";N;s:9:"publisher";N;s:14:"publisherImage";N;s:11:"description";N;s:11:"articleBody";N;}
+  _schema_news_article: a:11:{s:6:"active";N;s:8:"headline";N;s:16:"mainEntityOfPage";N;s:6:"author";N;s:5:"image";N;s:13:"datePublished";N;s:12:"dateModified";N;s:9:"publisher";N;s:14:"publisherImage";N;s:11:"description";N;s:11:"articleBody";N;}
+  _schema_event: a:12:{s:6:"active";N;s:4:"name";N;s:12:"locationName";N;s:15:"locationAddress";N;s:9:"startDate";N;s:7:"endDate";N;s:11:"description";N;s:13:"performerName";N;s:5:"image";N;s:5:"price";N;s:13:"priceCurrency";N;s:3:"url";N;}
+  _schema_product: a:12:{s:6:"active";N;s:4:"name";N;s:5:"image";N;s:11:"description";N;s:5:"brand";N;s:11:"ratingValue";N;s:11:"reviewCount";N;s:5:"price";N;s:13:"priceCurrency";N;s:12:"availability";N;s:13:"itemCondition";N;s:3:"url";N;}
+  _schema_video: a:10:{s:6:"active";N;s:4:"name";N;s:11:"description";N;s:12:"thumbnailUrl";N;s:10:"uploadDate";N;s:8:"duration";N;s:10:"contentUrl";N;s:8:"embedUrl";N;s:16:"interactionCount";N;s:7:"expires";N;}
+  _schema_service: a:13:{s:6:"active";N;s:4:"name";N;s:11:"serviceType";N;s:14:"additionalType";N;s:5:"award";N;s:8:"category";N;s:16:"providerMobility";N;s:11:"description";N;s:5:"image";N;s:16:"mainEntityOfPage";N;s:6:"sameAs";N;s:3:"url";N;s:13:"alternateName";N;}
+  _schema_review: a:10:{s:6:"active";N;s:8:"itemName";N;s:10:"reviewBody";N;s:4:"name";N;s:6:"author";N;s:13:"datePublished";N;s:11:"ratingValue";N;s:10:"bestRating";N;s:11:"worstRating";N;s:9:"publisher";N;}
+  _schema_aggregate_rating: a:13:{s:6:"active";N;s:11:"schema_type";N;s:4:"name";N;s:5:"image";N;s:10:"priceRange";N;s:9:"telephone";N;s:7:"address";N;s:11:"description";N;s:11:"ratingCount";N;s:11:"reviewCount";N;s:11:"ratingValue";N;s:10:"bestRating";N;s:11:"worstRating";N;}
+
+---
+<p>I have recently upgraded one of work project to PHP 7. What a bliss... Just by upgrading we have managed to reduce response time for Symfony based API from 100ms to 75ms (25% boost). (Note: responsibility of the decreased timing might also be from some updated libraries and drivers)<br />
+I have also managed to upgrade the present blog to the new PHP version and a similar improvement was observed.</p>
+<p>Other major improvements from my perspective:</p>
+<ul>
+<li>Strong type return methods (this can help increase the code quality and will help resolve some bugs in some early stages). I was a bit disappointed that overloading is still not available.</li>
+<li>Syntax errors are now catchable</li>
+</ul>

@@ -1,0 +1,47 @@
+---
+layout: post
+title: Why Scala is not so cool
+date: 2012-10-10 19:39:01.000000000 +03:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories: []
+tags: []
+meta:
+  original_post_id: '58'
+  _wp_old_slug: '58'
+  _edit_last: '1'
+  _wpas_done_all: '1'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1545122280;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:37;}i:1;a:1:{s:2:"id";i:14;}i:2;a:1:{s:2:"id";i:194;}}}}
+  _jetpack_dont_email_post_to_subs: '1'
+  _lf_language_code: en-US
+  _schema_article: a:12:{s:6:"active";N;s:8:"headline";N;s:16:"mainEntityOfPage";N;s:6:"author";N;s:5:"image";N;s:13:"datePublished";N;s:12:"dateModified";N;s:9:"publisher";N;s:14:"publisherImage";N;s:11:"description";N;s:11:"articleBody";N;s:19:"alternativeHeadline";N;}
+  _schema_blog_posting: a:11:{s:6:"active";N;s:8:"headline";N;s:16:"mainEntityOfPage";N;s:6:"author";N;s:5:"image";N;s:13:"datePublished";N;s:12:"dateModified";N;s:9:"publisher";N;s:14:"publisherImage";N;s:11:"description";N;s:11:"articleBody";N;}
+  _schema_news_article: a:11:{s:6:"active";N;s:8:"headline";N;s:16:"mainEntityOfPage";N;s:6:"author";N;s:5:"image";N;s:13:"datePublished";N;s:12:"dateModified";N;s:9:"publisher";N;s:14:"publisherImage";N;s:11:"description";N;s:11:"articleBody";N;}
+  _schema_event: a:12:{s:6:"active";N;s:4:"name";N;s:12:"locationName";N;s:15:"locationAddress";N;s:9:"startDate";N;s:7:"endDate";N;s:11:"description";N;s:13:"performerName";N;s:5:"image";N;s:5:"price";N;s:13:"priceCurrency";N;s:3:"url";N;}
+  _schema_product: a:12:{s:6:"active";N;s:4:"name";N;s:5:"image";N;s:11:"description";N;s:5:"brand";N;s:11:"ratingValue";N;s:11:"reviewCount";N;s:5:"price";N;s:13:"priceCurrency";N;s:12:"availability";N;s:13:"itemCondition";N;s:3:"url";N;}
+  _schema_video: a:10:{s:6:"active";N;s:4:"name";N;s:11:"description";N;s:12:"thumbnailUrl";N;s:10:"uploadDate";N;s:8:"duration";N;s:10:"contentUrl";N;s:8:"embedUrl";N;s:16:"interactionCount";N;s:7:"expires";N;}
+  _schema_service: a:13:{s:6:"active";N;s:4:"name";N;s:11:"serviceType";N;s:14:"additionalType";N;s:5:"award";N;s:8:"category";N;s:16:"providerMobility";N;s:11:"description";N;s:5:"image";N;s:16:"mainEntityOfPage";N;s:6:"sameAs";N;s:3:"url";N;s:13:"alternateName";N;}
+  _schema_review: a:10:{s:6:"active";N;s:8:"itemName";N;s:10:"reviewBody";N;s:4:"name";N;s:6:"author";N;s:13:"datePublished";N;s:11:"ratingValue";N;s:10:"bestRating";N;s:11:"worstRating";N;s:9:"publisher";N;}
+  _schema_aggregate_rating: a:13:{s:6:"active";N;s:11:"schema_type";N;s:4:"name";N;s:5:"image";N;s:10:"priceRange";N;s:9:"telephone";N;s:7:"address";N;s:11:"description";N;s:11:"ratingCount";N;s:11:"reviewCount";N;s:11:"ratingValue";N;s:10:"bestRating";N;s:11:"worstRating";N;}
+
+---
+<p>A friend of mine is currently attending a Scala course on courseraand she showed me one of her issues searching for an advice. Unfortunately for her after 5 minutes i was leaving the desk as i was unable to come up with any idea.</p>
+<p>Based on this experience i tried to have a look at Scala docummentation, so i've started with <a href="http://www.scala-lang.org/node/25">introduction</a> and first thing i've seen was that is Java based. Considering my previous experience with a programming language writen over Java, Coldfusion(a huge resource consumer), this wasn't the best "nice to meet you" conversation. Basically Scala is compiling your code into Java binary compatible file.</p>
+<blockquote><p>Scala programs run on the Java VM, are byte code compatible with Java</p></blockquote>
+<p>A plus was the fact that major companies were already using Scala.</p>
+<blockquote><p>For example, at <a href="http://twitter.com/">Twitter</a>, the social networking service, Robey Pointer moved their core message queue from Ruby to Scala. This change was driven by the company's need to reliably scale their operation to meet fast growing Tweet rates, already reaching <a href="http://blog.metaroll.com/2009/01/22/almost-5000-tweets-per-minute-during-obamas-inauguration/">5000 per minute during the Obama Inauguration</a>. Robeys thinking behind the <a href="http://blog.twitter.com/2009/01/building-on-open-source.html">Twitter Kestrel project</a> is explained in the developers <a href="http://robey.livejournal.com/53832.html">live journal</a>. His concise <a href="http://github.com/robey/kestrel/tree/master">1500 lines of Scala code</a> can be seen as he has generously made them available as an open source project.</p></blockquote>
+<p>So far introduction hasn't brought very much confidence in continuing, so i asked my friend to give me some key points that would represent the an advantage of using it in a real case. First and only point(due to lack of time) mentioned was a better stack management while using recursive functions. At this point i said that all recursive methods can be implemented also iterative in order to avoid stack problems while using large volumes of data. On the other hand this may raise complexity of the code.</p>
+<p>This conversation being over i've came back to <a href="http://www.scala-lang.org/">Scala site</a> searching for some code examples. Look what i found:</p>
+<blockquote><p>Any method which takes a single parameter can be used as an infix operator in Scala. Here is the definition of class<code>MyBool</code> which defines three methods <code>and</code>, <code>or</code>, and <code>negate</code>.</p>
+<pre>class MyBool(x: Boolean) {
+  def and(that: MyBool): MyBool = if (x) that else this
+  def or(that: MyBool): MyBool = if (x) this else that
+  def negate: MyBool = new MyBool(!x)
+}</pre>
+<pre>def not(x: MyBool) = x negate; // semicolon required here
+def xor(x: MyBool, y: MyBool) = (x or y) and not(x and y)</pre>
+</blockquote>
+<p>Why a programming language requires such a feature? Why don't they like <code>obj.method(param)</code> ?</p>

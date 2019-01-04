@@ -1,0 +1,39 @@
+---
+layout: post
+title: Experience with Linux on Core iX with ATI video laptops
+date: 2012-03-20 19:08:53.000000000 +02:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Programming
+tags: []
+meta:
+  original_post_id: '14'
+  _wp_old_slug: '14'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1542707415;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:28;}i:1;a:1:{s:2:"id";i:201;}i:2;a:1:{s:2:"id";i:79;}}}}
+  _edit_last: '1'
+  _jetpack_dont_email_post_to_subs: '1'
+  _lf_language_code: en-US
+  _schema_article: a:12:{s:6:"active";N;s:8:"headline";N;s:16:"mainEntityOfPage";N;s:6:"author";N;s:5:"image";N;s:13:"datePublished";N;s:12:"dateModified";N;s:9:"publisher";N;s:14:"publisherImage";N;s:11:"description";N;s:11:"articleBody";N;s:19:"alternativeHeadline";N;}
+  _schema_blog_posting: a:11:{s:6:"active";N;s:8:"headline";N;s:16:"mainEntityOfPage";N;s:6:"author";N;s:5:"image";N;s:13:"datePublished";N;s:12:"dateModified";N;s:9:"publisher";N;s:14:"publisherImage";N;s:11:"description";N;s:11:"articleBody";N;}
+  _schema_news_article: a:11:{s:6:"active";N;s:8:"headline";N;s:16:"mainEntityOfPage";N;s:6:"author";N;s:5:"image";N;s:13:"datePublished";N;s:12:"dateModified";N;s:9:"publisher";N;s:14:"publisherImage";N;s:11:"description";N;s:11:"articleBody";N;}
+  _schema_event: a:12:{s:6:"active";N;s:4:"name";N;s:12:"locationName";N;s:15:"locationAddress";N;s:9:"startDate";N;s:7:"endDate";N;s:11:"description";N;s:13:"performerName";N;s:5:"image";N;s:5:"price";N;s:13:"priceCurrency";N;s:3:"url";N;}
+  _schema_product: a:12:{s:6:"active";N;s:4:"name";N;s:5:"image";N;s:11:"description";N;s:5:"brand";N;s:11:"ratingValue";N;s:11:"reviewCount";N;s:5:"price";N;s:13:"priceCurrency";N;s:12:"availability";N;s:13:"itemCondition";N;s:3:"url";N;}
+  _schema_video: a:10:{s:6:"active";N;s:4:"name";N;s:11:"description";N;s:12:"thumbnailUrl";N;s:10:"uploadDate";N;s:8:"duration";N;s:10:"contentUrl";N;s:8:"embedUrl";N;s:16:"interactionCount";N;s:7:"expires";N;}
+  _schema_service: a:13:{s:6:"active";N;s:4:"name";N;s:11:"serviceType";N;s:14:"additionalType";N;s:5:"award";N;s:8:"category";N;s:16:"providerMobility";N;s:11:"description";N;s:5:"image";N;s:16:"mainEntityOfPage";N;s:6:"sameAs";N;s:3:"url";N;s:13:"alternateName";N;}
+  _schema_review: a:10:{s:6:"active";N;s:8:"itemName";N;s:10:"reviewBody";N;s:4:"name";N;s:6:"author";N;s:13:"datePublished";N;s:11:"ratingValue";N;s:10:"bestRating";N;s:11:"worstRating";N;s:9:"publisher";N;}
+  _schema_aggregate_rating: a:13:{s:6:"active";N;s:11:"schema_type";N;s:4:"name";N;s:5:"image";N;s:10:"priceRange";N;s:9:"telephone";N;s:7:"address";N;s:11:"description";N;s:11:"ratingCount";N;s:11:"reviewCount";N;s:11:"ratingValue";N;s:10:"bestRating";N;s:11:"worstRating";N;}
+  _wpas_done_all: '1'
+
+---
+<p>Until a few days ago i owned a HP Pavilion DV3-4071ee, a very nice 13'' laptop with a Core i5(first generation) and with switchable graphics from ATI that came with Windows 7 Home Premium. All programs i was using day by day were running with decent speed. Main problem came when i had to work on a symfony based project. Previously i had to work on a Drupal project and at that time, after a thorough reading i decided to go with a IIS instalation with the PHP that it's offered by <a href="http://www.microsoft.com/web/downloads/platform.aspx">WPI</a>.</p>
+<p><!--more--></p>
+<p>My big problem came when a fast cgi error (php-cgi.exe terminated unexpectedly), that i had no chance to debug it as i couldn't find any useful thing in the IIS/php logs, I decided it's time to move to a linux based box.</p>
+<p>When i bought that laptop i knew that there were some problems with Linux and switchable graphics, but i said "Hey, maybe they will fix this in an year or so". But the year passed(i belive something like 1+1/2) and still there wasn't a Linux distribution that would work out of the box with my hardware.</p>
+<p>So i said, let's change the hardware(my wife didn't let me write hw).  So i bought a Lenovo IdeaPad 370, that i tested previously with a Ubuntu live CD and it worked perfectly. After getting it from the store, first thing, plug the usb with the Ubuntu kit and started the install. Install went all the way to the end with no problems, but when rebooted, it didn't started into grub( at that point I was like :| - you must be joking, bought a laptop especially for linux, and it didn't work with it).</p>
+<p>Next step start with the live usb Ubuntu, to see what happened with the drive. First thing noticed, the partition table had some un-familiar look (GUID partition table and an EFI and a small efi partition). After a search on Google, i found out that this is happening with EFI capable hardware, only problem, in the specification of the laptop there was no mention about such thing. First idea was to try other linux distribution and the only one which installed from first try was <a title="archlinux" href="http://www.archlinux.org/">archlinux</a>(very painfull distribution - after install, all i had was a console, with no networking). I managed to raise a network connection and struggled to install  gnome and update the system to latest version of all packages, but it was a bug headache, so i said this is not the way and went back to see how i can fix the ubuntu install.</p>
+<p>After installing ubuntu again, and having the same problem as before(this time i forced a MBR based partition table). Again going to live CD, trying to fix MBR and grub, i seen that <a href="https://help.ubuntu.com/community/Boot-Repair">the utility used</a> was telling me that i had an EFI capable piece of hw and offered me the posibility to override this. I said no, i'm sure it's not EFI and following usual steps(described in previous link), i was able to fix MBR and grub. At next reboot I had a functional Ubuntu box :).</p>
+<p>It seems that mid level laptops have a great deficiency when it comes to linux. I strongly advise to read(if you can test, even better) the hardware before you buy it, if it's compatible with your preferred linux distro.</p>

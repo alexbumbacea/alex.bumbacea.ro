@@ -1,0 +1,22 @@
+---
+layout: post
+title: Plone "love" story
+date: 2009-02-25 02:47:31.000000000 +02:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories: []
+tags: []
+meta:
+  _publicize_pending: '1'
+  original_post_id: '79'
+  _wp_old_slug: '79'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1544511525;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:93;}i:1;a:1:{s:2:"id";i:201;}i:2;a:1:{s:2:"id";i:37;}}}}
+
+---
+<p>A few days ago i had to change the server of eestec to vmware ESX. All good and ok, i made the necessary backups, installed ESX, installed Windows into a VM. The issue apperead when i tried to restore the plone instance to the new installed Windows server. After restoring the content as described onto the <a href="http://www.plone.org">Plone</a> site it didn't wanted to start as supposed to. I reinstalled plone a few times and finally, today, i managed to make it work. The funny part is that i don't know exactly why this time worked and i hope it will not need a reinstall in the near future.</p>
+<p>I hate Plone and i consider it probably the most bizare cms software i have encountered until now. Hopefully in 3-4 months we will port the entire site into a mysql/php based custom made CMS that will integrate with the rest of the sites.</p>
+<p>P.S. If you need to restore plone i advise you to have a full backup of Data folder. Install the same version of plone on the new machine. Copy the content of  Products folder (from the backup) over the clean install(but don't overwrite anything!!!!). After that replace the entire var directory with the one from the backup and start plone. Hope this will work in your case... in mine ... it worked.</p>
+<p><img class="alignnone size-medium wp-image-78" src="{{ site.baseurl }}/assets/eestec_home-300x124.png" alt="eeStec Home Page" width="652" height="260" /></p>
